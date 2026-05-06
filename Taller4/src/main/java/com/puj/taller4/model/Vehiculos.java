@@ -85,4 +85,14 @@ public class Vehiculos {
         int ultimodigito = Character.getNumericValue(ultimaletra);
 
     }
+    @Override
+    public  String toString(){
+        return "Vehículo: " + this.marca +
+                " (Placa: " + this.placa + ")\n" +
+                "Fecha Matrícula: " + this.fechaMatricula + "\n" +
+                "Arrendado: " + (this.arrendado ? "Sí" : "No") +
+                (this.arrendado ? "\nCliente: " + this.clienteActual.getNombreCompleto() : "");
+    }
+    }
+
 }
