@@ -9,6 +9,8 @@ public class Gato extends Mascotas {
         this.color = color;
         this.cazador = cazador;
     }
+
+
     @Override
     public String toString() {
         return super.toString() +

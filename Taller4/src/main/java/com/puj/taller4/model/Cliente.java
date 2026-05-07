@@ -3,14 +3,14 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 
-public class Clientes {
+public class Cliente {
     private String tipoIdentificacion;
     private String numeroIdentificacion;
     private String nombres;
     private String apellidos;
     private LocalDate fechaNacimiento;
 
-    public Clientes(String tipoIdentificacion, String numeroIdentificacion, String nombres, String apellidos, Date fechaNacimiento) {
+    public Cliente(String tipoIdentificacion, String numeroIdentificacion, String nombres, String apellidos, LocalDate fechaNacimiento) {
         this.tipoIdentificacion = tipoIdentificacion;
         this.numeroIdentificacion = numeroIdentificacion;
         this.nombres = nombres;
@@ -50,11 +50,11 @@ public class Clientes {
         this.apellidos = apellidos;
     }
 
-    public Date getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -73,7 +73,7 @@ public class Clientes {
                 "Tipo ID: " + tipoIdentificacion +
                 "Número ID: " + numeroIdentificacion +
                 "Fecha Nacimiento: " + fechaNacimiento +
-                "Edad: " + calcularEdad();
+                "Edad: " + CalcularEdad();
     }
 
 }

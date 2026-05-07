@@ -11,11 +11,15 @@ public class Perro extends Mascotas {
 
     }
     @Override
+    public String mostrarTipo() {
+        return "Soy un perro";
+    }
 
+    @Override
     public String toString() {
         return super.toString() +
                 ", Raza: " + raza +
-                ", Entrenado: " + tieneEntrenamiento;
+                ", Entrenado: " + Entrenamiento;
     }
 
 

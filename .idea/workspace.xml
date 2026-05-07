@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99c58a14-2454-49d3-8fa9-5b4ef97f0547" name="Changes" comment="actua2" />
+    <list default="true" id="99c58a14-2454-49d3-8fa9-5b4ef97f0547" name="Changes" comment="actua2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller4/src/main/java/com/puj/taller4/model/Vehiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Taller4/src/main/java/com/puj/taller4/model/Vehiculos.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/angel/OneDrive/Documents/CODIGOS/Java" value="3D0cTBVNb45uQTql3wgpBMBzn7W" />
+    </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="42" />
@@ -25,7 +33,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/David97979/Talleres-Java.git&quot;,
-    &quot;accountId&quot;: &quot;1f0b73d8-21b1-4a43-a685-9f598a635afa&quot;
+    &quot;accountId&quot;: &quot;63b4b6a7-8f0d-4b26-8ca5-a4f6245b346b&quot;
   }
 }</component>
   <component name="McpProjectServerCommands">
@@ -47,6 +55,7 @@
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
@@ -71,6 +80,8 @@
       <updated>1777422433538</updated>
       <workItem from="1777422435532" duration="2112000" />
       <workItem from="1777435606775" duration="88000" />
+      <workItem from="1777525374685" duration="843000" />
+      <workItem from="1777600469124" duration="1496000" />
     </task>
     <task id="LOCAL-00001" summary="actua1">
       <option name="closed" value="true" />
