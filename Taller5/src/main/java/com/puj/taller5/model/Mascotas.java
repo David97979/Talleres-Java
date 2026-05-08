@@ -1,7 +1,9 @@
 package com.puj.taller5.model;
+import com.puj.taller5.excepciones.DatoInvalidoException;
+
 import java.io.*;
 
-public class Mascotas {
+public class Mascotas implements Serializable{
     private int codigo;
     private String nombre;
     private int edad;
@@ -18,7 +20,10 @@ public class Mascotas {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(int codigo) throws DatoInvalidoException {
+        if(codigo <=  0){
+            throw new DatoInvalidoException("Codigo Invalido");
+        }
         this.codigo = codigo;
     }
 
@@ -26,7 +31,11 @@ public class Mascotas {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre) throws DatoInvalidoException {
+        if(nombre == null || nombre.isEmpty()){
+            throw new DatoInvalidoException("Nombre Invalido");
+
+        }
         this.nombre = nombre;
     }
 
@@ -34,9 +43,9 @@ public class Mascotas {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(int edad) throws DatoInvalidoException {
         if (edad < 0) {
-            throw new IllegalArgumentException("Edad inválida");
+            throw new DatoInvalidoException("Edad inválida");
         }
         this.edad = edad;
     }
@@ -45,10 +54,11 @@ public class Mascotas {
         return cedulaDueno;
     }
 
-    public void setCedulaDueno(int cedulaDueno) {
-        if (cedulaDueno == null || cedulaDueno.isEmpty()) {
-            throw new IllegalArgumentException("Cédula inválida");
+    public void setCedulaDueno(int cedulaDueno) throws DatoInvalidoException{
+        if (cedulaDueno<= 0) {
+            throw new DatoInvalidoException("Cédula inválida");
         }
+        this.cedulaDueno = cedulaDueno;
     }
     public String mostrarTipo(){
         return "Soy Mascota";

@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99c58a14-2454-49d3-8fa9-5b4ef97f0547" name="Changes" comment="actua2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taller4/src/main/java/com/puj/taller4/model/Vehiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Taller4/src/main/java/com/puj/taller4/model/Vehiculos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/excepciones/CedulaDuplicadaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/excepciones/DatoInvalidoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Taller5/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/control/GestorMascotas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/control/GestorMascotas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/main/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/model/Gato.java" beforeDir="false" afterPath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/model/Gato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/model/Mascotas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/model/Mascotas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/model/Perro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Taller5/src/main/java/com/puj/taller5/model/Perro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,28 +55,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/david/Documents/Java/Talleres-Java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="99c58a14-2454-49d3-8fa9-5b4ef97f0547" name="Changes" comment="" />
@@ -82,6 +90,7 @@
       <workItem from="1777435606775" duration="88000" />
       <workItem from="1777525374685" duration="843000" />
       <workItem from="1777600469124" duration="1496000" />
+      <workItem from="1778199569797" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="actua1">
       <option name="closed" value="true" />

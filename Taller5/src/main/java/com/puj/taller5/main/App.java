@@ -1,13 +1,13 @@
 package com.puj.taller5.main;
+import com.puj.taller5.control.GestorMascotas;
 
-/**
- * Hello world!
- *
- */
+import com.puj.taller5.excepciones.*;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        GestorMascotas gestor = new GestorMascotas();
+        gestor.menu();
     }
 }

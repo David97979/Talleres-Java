@@ -5,33 +5,35 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Scanner;
 import com.puj.taller5.persistencia.ArchivosLyE;
+import com.puj.taller5.excepciones.CedulaDuplicadaException;
+import com.puj.taller5.excepciones.DatoInvalidoException;
 
 
 public class GestorMascotas {
-    private ArrayList<Mascotas> ListaMascotas;
+    private ArrayList<Mascotas> listaMascotas;
     private Set<Integer> cedulasRegistradas;
 
     public GestorMascotas() {
-        ListaMascotas = new ArrayList<>();
+        listaMascotas = new ArrayList<>();
         cedulasRegistradas = new HashSet<>();
     }
-    public void agregarPerro(Perro perro) throws Exception{
+    public void agregarPerro(Perro perro) throws CedulaDuplicadaException{
         if(cedulasRegistradas.contains(perro.getCedulaDueno())){
-            throw new Exception("La cédula del dueño ya está registrada");
+            throw new CedulaDuplicadaException("La cédula del dueño ya está registrada");
         }
-        ListaMascotas.add(perro);
+        listaMascotas.add(perro);
         cedulasRegistradas.add(perro.getCedulaDueno());
 
     }
-    public void agregarGato(Gato gato) throws Exception{
+    public void agregarGato(Gato gato) throws CedulaDuplicadaException{
         if(cedulasRegistradas.contains(gato.getCedulaDueno())){
-            throw new Exception("La cédula del dueño ya está registrada");
+            throw new CedulaDuplicadaException("La cédula del dueño ya está registrada");
         }
-        ListaMascotas.add(gato);
+        listaMascotas.add(gato);
         cedulasRegistradas.add(gato.getCedulaDueno());
     }
     public void listarMascotas() {
-        for(Mascotas m : ListaMascotas){
+        for(Mascotas m : listaMascotas){
             System.out.println(m.mostrarTipo());
             System.out.println(m);
             System.out.println("-----------------");
@@ -39,7 +41,7 @@ public class GestorMascotas {
     }
     public void buscarPorCedula(int cedulaDueno) {
         boolean encontrado = false;
-        for(Mascotas m : ListaMascotas){
+        for(Mascotas m : listaMascotas){
             if(m.getCedulaDueno() == cedulaDueno){
                 System.out.println(m);
                 encontrado = true;
@@ -51,7 +53,7 @@ public class GestorMascotas {
     }
     public void guardarEnArchivo(){
         try {
-            ArchivosLyE.guardar(ListaMascotas);
+            ArchivosLyE.guardar(listaMascotas);
             System.out.println("Mascotas guardadas en el archivo exitosamente.");
         } catch (Exception e) {
             System.out.println("Error al guardar en el archivo: " + e.getMessage());
@@ -59,14 +61,13 @@ public class GestorMascotas {
     }
     public void leerDesdeArchivo(){
         try {
-            ArrayList<Mascotas> listaMascotas = ArchivosLyE.leer();
+            listaMascotas = ArchivosLyE.leer();
             cedulasRegistradas.clear();
             for(Mascotas m : listaMascotas){
                 cedulasRegistradas.add(m.getCedulaDueno());
             }
-
+            System.out.println("Mascotas cargadas desde el archivo exitosamente.");
         }
-        System.out.println("Mascotas cargadas desde el archivo exitosamente.");
          catch (Exception e) {
             System.out.println("Error al leer desde el archivo: " + e.getMessage());
         }
