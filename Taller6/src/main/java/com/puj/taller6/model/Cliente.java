@@ -28,27 +28,57 @@ public class Cliente implements Serializable {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getIdentificacion() {
         return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
 
     public String getDireccion() {
         return direccion;
     }
 
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
     public String getCiudad() {
         return ciudad;
     }
 
-    public int getPuntaje() {
-        return puntaje;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
+
 
     public ArrayList<Cuenta> getCuentas() {
         return cuentas;
     }
+    public void setCuentas(ArrayList<Cuenta> cuentas) {
+        this.cuentas = cuentas;
+    }
+    public int getPuntaje() {
+        return puntaje;
+    }
 
     public void setPuntaje(int puntaje) {
         this.puntaje = puntaje;
+    }
+    @Override
+    public String toString() {
+        return "Cliente:" + " (" +
+                "nombre:" + nombre +
+                ", identificacion:" + identificacion  +
+                ", direccion:" + direccion +
+                ", ciudad:" + ciudad +
+                ", puntaje:" + puntaje +
+                ", cuentas:" + cuentas +
+                ")";
     }
 }

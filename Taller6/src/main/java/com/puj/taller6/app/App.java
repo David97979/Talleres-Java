@@ -9,19 +9,42 @@ public class App
     {
         GestionArchivos gestor = new GestionArchivos();
         gestor.leerArchivo();
-        for(Cliente cliente : gestor.getClientes()){
+        gestor.guardarObjetos();
+        gestor.leerObjetos();
+        gestor.generarReporteRiesgos();
+        for (Cliente cliente : gestor.getClientes()) {
+
             System.out.println("CLIENTE");
-            System.out.println("Nombre: "+cliente.getNombre());
-            System.out.println("ID"+ cliente.getIdentificacion());
-            System.out.println("Ciudad: "+cliente.getCiudad());
-            System.out.println("Puntaje:"+cliente.getPuntaje());
+
+            System.out.println("Nombre: " + cliente.getNombre());
+
+            System.out.println("Identificación: " + cliente.getIdentificacion());
+
+            System.out.println("Dirección: " + cliente.getDireccion());
+
+            System.out.println("Ciudad: " + cliente.getCiudad());
+
+            System.out.println("Puntaje: " + cliente.getPuntaje());
+
             System.out.println("CUENTAS");
 
-            for(Cuenta cuenta : cliente.getCuentas()){
-                System.out.println(cuenta.getNombre()
-                + " - " + cuenta.getSaldo() + " - " +
-                        cuenta.getBanco());
+            for (Cuenta cuenta : cliente.getCuentas()) {
+
+                System.out.println("Tipo: "+ cuenta.getTipoCuenta());
+
+                System.out.println("Saldo: "
+                        + cuenta.getSaldo());
+
+                System.out.println("Banco: " + cuenta.getBanco());
+
+                System.out.println("Red: " + cuenta.getRed());
+
+                System.out.println("Categoría: " + cuenta.getCategoria());
+
+                System.out.println("-------------------");
             }
         }
     }
 }
+
+

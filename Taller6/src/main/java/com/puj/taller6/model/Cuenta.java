@@ -1,45 +1,42 @@
 package com.puj.taller6.model;
+
 import java.io.Serializable;
-public class Cuenta  implements Serializable {
 
-    private String tipoCuenta;
-    private double saldo;
-    private String banco;
-    private String red;
-    private String categoria;
+public abstract class Cuenta implements Serializable {
+    protected double saldo;
+    protected String banco;
+    protected String red;
 
-    public Cuenta(String tipoCuenta, double saldo, String banco, String red, String categoria) {
-        this.tipoCuenta = tipoCuenta;
+    public Cuenta(double saldo, String banco, String red) {
+
         this.saldo = saldo;
         this.banco = banco;
         this.red = red;
-        this.categoria = categoria;
-    }
-
-    public String getTipoCuenta() {
-        return tipoCuenta;
     }
 
     public double getSaldo() {
         return saldo;
     }
 
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
     public String getBanco() {
         return banco;
+    }
+
+    public void setBanco(String banco) {
+        this.banco = banco;
     }
 
     public String getRed() {
         return red;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public void setRed(String red) {
+        this.red = red;
     }
 
-    @Override
-    public String toString(){
-        return "Cuenta: " + tipoCuenta + " - " + saldo + " - " + banco;
-    }
-
+    public abstract String getTipoCuenta();
 }
-
